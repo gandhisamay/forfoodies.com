@@ -1,0 +1,114 @@
+.navbar{
+    background-color: #E3E1EF;
+    height: 3rem;
+    color: #8e9aaf;
+    font-family: 'Nunito';
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.25rem;
+    font-size: 24px;
+}
+
+.icon img{
+    height: 3rem;
+    width: 3rem;
+}
+
+.searchBar .image{
+    position: relative;
+    display: inline-block;
+}
+
+.searchBar .image img{
+    height: 40rem;
+    width: 100vw;
+}
+
+.searchBar .search{
+    position: absolute;
+    top: 20rem;
+    right: 10vw;
+}
+
+.searchBar .search input{
+    width: 20rem;
+    height: 3rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    font-size: 1.2rem;
+}
+
+.searchBar .search{
+    display: flex;
+    align-items: center;
+}
+
+.searchBar .search span{
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1.075rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.searchBar .search input:focus{
+    outline: none;
+}
+
+@media(max-width: 600px){
+    .searchBar .image img{
+        height: 30rem;
+    }
+
+    .searchBar .search{
+        top: 15rem;
+    }
+}
+
+@media(max-width:450px){
+    .searchBar .image img{
+        height: 25rem;
+    }
+    .searchBar .search{
+        top: 12rem;
+        right: 5vw;
+    }
+}
+
+@media(max-width:376px){
+    .searchBar .image img{
+        height: 20rem;
+    }
+
+    .searchBar .search{
+        top: 10rem;
+        right: 5vw;
+    }
+
+    .searchBar .search input{
+        width: 18rem;
+    }
+}
+
+@media(max-width:321px){
+    .searchBar .image img{
+        height: 15rem;
+    }
+
+    .searchBar .search{
+        top: 10rem;
+        right: 2vw;
+    }
+
+    .searchBar .search input{
+        width: 16rem;
+        height: 2.5rem;
+    }
+
+    .searchBar .search span{
+        padding: 0.825rem;
+    }
+}
