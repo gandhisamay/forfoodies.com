@@ -1,15 +1,30 @@
-import React from 'react';
+import React,{useState, useEffect}  from 'react';
 import '../Styles/app.css';
 import food2 from '../Images/food2.jpg'
 
-const SearchBar = () => {
+const SearchBar = ({getSearchTerm}) => {
+
+    const [searchTerm, setSearchTerm] = useState('');
+
+    useEffect(()=>{
+
+    });
+
+    const onFormSubmit = (e)=>{
+        e.preventDefault();
+        console.log("FROM SEARCHBAR !",searchTerm);
+        getSearchTerm(searchTerm);
+    }
+
     return <div className="searchBar">
         <div className="image">
             <img src={food2} alt="" />
         </div>
         <div className="search">
             <span><i className="fas fa-search"></i></span>
-            <input placeholder="Search Receipe" />
+            <form onSubmit={onFormSubmit}>
+                <input placeholder="Search Receipe" onChange={(e)=>{setSearchTerm(e.target.value)}}/>
+            </form>
         </div>
     </div>
 }

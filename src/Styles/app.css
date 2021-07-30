@@ -1,14 +1,16 @@
 .navbar{
     background-color: #E3E1EF;
     height: 3rem;
-    color: #8e9aaf;
+    /* color: #8e9aaf; */
+    color: #e71d36;
     font-family: 'Nunito';
-    font-weight: 700;
+    font-weight: 900;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 3rem;
     padding: 0.25rem;
-    font-size: 24px;
+    font-size: 28px;
+    justify-content: center;
 }
 
 .icon img{
