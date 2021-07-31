@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Styles/app.css';
 
-const Card = ({recipe})=>{
+const RecipeCard = ({recipe})=>{
     return (
     <div className="card">
         <div className="image">
@@ -14,4 +14,4 @@ const Card = ({recipe})=>{
     );
 }
 
-export default Card;
+export default RecipeCard;

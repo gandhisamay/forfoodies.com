@@ -15,7 +15,7 @@ const Foodie = ()=>{
             return;
         }else{
         console.log("in else", term);
-        edamam('/v3',{
+        edamam('/v2',{
             params:{
                 q: term
             }
