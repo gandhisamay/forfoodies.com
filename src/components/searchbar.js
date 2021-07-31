@@ -1,4 +1,4 @@
-import React,{useState, useEffect}  from 'react';
+import React,{useState}  from 'react';
 import '../Styles/app.css';
 import food2 from '../Images/food2.jpg'
 
@@ -6,13 +6,8 @@ const SearchBar = ({getSearchTerm}) => {
 
     const [searchTerm, setSearchTerm] = useState('');
 
-    useEffect(()=>{
-
-    });
-
     const onFormSubmit = (e)=>{
         e.preventDefault();
-        console.log("FROM SEARCHBAR !",searchTerm);
         getSearchTerm(searchTerm);
     }
 

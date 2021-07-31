@@ -60,6 +60,27 @@
     outline: none;
 }
 
+.recipes{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 18rem;
+    height: 27rem;
+    border: 2px solid black;
+}
+
+.card img{
+    width: 18rem;
+    height: 20rem;
+}
+
 @media(max-width: 600px){
     .searchBar .image img{
         height: 30rem;
