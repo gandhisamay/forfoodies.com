@@ -5,7 +5,7 @@ import Navbar from './components/navbar';
 import SearchBar from './components/searchbar';
 
 const Foodie = ()=>{
-    let [term, setTerm] = useState('');
+    let [term, setTerm] = useState('kulcha');
     let [results, setResults] = useState({});
 
     useEffect(()=>{
@@ -34,11 +34,20 @@ const Foodie = ()=>{
         console.log(term);
     }
 
+    const shouldIDisplayRecipe = ()=>{
+        if(results){
+            console.log("From I should",results)
+            return <DisplayRecipe recipes={results} />
+        }else{
+            return;
+        }
+    }
+
     return (
         <div>
             <Navbar />
             <SearchBar getSearchTerm={getSearchTerm}/>
-            <DisplayRecipe recipes={results}/>
+            {shouldIDisplayRecipe()}
         </div>
     );
 }

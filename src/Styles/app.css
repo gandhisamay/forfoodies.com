@@ -69,17 +69,29 @@
 .card{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    width: 18rem;
-    height: 27rem;
-    border: 2px solid black;
+    width: 17rem;
+    height: 26rem;
+    margin: 0.5rem 0;
+    font-size: 24px;
+    font-family: 'Nunito';
+    gap: 1rem;
+    text-align: center;
 }
 
 .card img{
-    width: 18rem;
+    width: 17rem;
     height: 20rem;
 }
+
+.displayRecipe{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: space-evenly;
+    margin: 0;
+}
+
 
 @media(max-width: 600px){
     .searchBar .image img{

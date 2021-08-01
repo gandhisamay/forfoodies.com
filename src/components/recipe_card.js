@@ -2,13 +2,14 @@ import React from 'react';
 import '../Styles/app.css';
 
 const RecipeCard = ({recipe})=>{
+    console.log("From recipe", recipe);
     return (
     <div className="card">
         <div className="image">
-            <img src={recipe.image} alt=""/>
+            <img src={recipe.recipe.image} alt=""/>
         </div>
         <div className="label">
-            {recipe.label}
+            {recipe.recipe.label}
         </div>
     </div>
     );
