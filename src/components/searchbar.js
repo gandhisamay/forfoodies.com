@@ -1,12 +1,12 @@
-import React,{useState}  from 'react';
+import React, { useState } from 'react';
 import '../Styles/app.css';
 import food2 from '../Images/food2.jpg'
 
-const SearchBar = ({getSearchTerm}) => {
+const SearchBar = ({ getSearchTerm }) => {
 
     const [searchTerm, setSearchTerm] = useState('');
 
-    const onFormSubmit = (e)=>{
+    const onFormSubmit = (e) => {
         e.preventDefault();
         getSearchTerm(searchTerm);
     }
@@ -16,9 +16,12 @@ const SearchBar = ({getSearchTerm}) => {
             <img src={food2} alt="" />
         </div>
         <div className="search">
-            <span><i className="fas fa-search"></i></span>
+
             <form onSubmit={onFormSubmit}>
-                <input placeholder="Search Receipe" onChange={(e)=>{setSearchTerm(e.target.value)}}/>
+                <div>
+                    <h1>Find a Recipe!</h1>
+                </div>
+                    <input placeholder="Search Receipe" onChange={(e) => { setSearchTerm(e.target.value) }} />
             </form>
         </div>
     </div>

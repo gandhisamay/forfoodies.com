@@ -21,11 +21,12 @@
 .searchBar .image{
     position: relative;
     display: inline-block;
+    width: 100%;
 }
 
 .searchBar .image img{
     height: 40rem;
-    width: 100vw;
+    width: 100%;
 }
 
 .searchBar .search{
@@ -39,9 +40,9 @@
     height: 3rem;
     background-color: rgba(255, 255, 255, 0.9);
     border: none;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    border-radius: 1rem;
     font-size: 1.2rem;
+    text-align: center;
 }
 
 .searchBar .search{
@@ -49,11 +50,13 @@
     align-items: center;
 }
 
-.searchBar .search span{
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 1.075rem;
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
+.searchBar .search h1{
+    font-size: 40px;
+    font-family: 'Nunito';
+    margin-bottom: 3rem !important;
+    color: #e71d36;
+    font-weight: 700;
+    text-align: center;
 }
 
 .searchBar .search input:focus{
@@ -71,9 +74,9 @@
     flex-direction: column;
     align-items: center;
     width: 17rem;
-    height: 26rem;
+    height: 17rem;
     margin: 0.5rem 0;
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'Nunito';
     gap: 1rem;
     text-align: center;
@@ -81,15 +84,51 @@
 
 .card img{
     width: 17rem;
-    height: 20rem;
+    height: 14rem;
 }
 
 .displayRecipe{
     display: flex;
     flex-wrap: wrap;
-    width: 100vw;
-    justify-content: space-evenly;
-    margin: 0;
+    width: 100%;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipeHeader, .recipeFooter{
+    font-size: 28px;
+    font-family: 'Nunito';
+    margin: 2rem 1rem;
+    color: #e71d36;
+}
+
+.recipeFooter{
+    text-align: center;
+    font-weight: 700;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 20px;
+    font-family: 'Nunito';
+    background-color: #E3E1EF;
+    height: 3rem;
+}
+
+.links{
+    color: #2ec4b6;
+    text-decoration: none;
+}
+.links:hover{
+    text-decoration: underline;
+}
+
+.active{
+    display: none;
 }
 
 
@@ -135,15 +174,12 @@
 
     .searchBar .search{
         top: 10rem;
-        right: 2vw;
+        right: 6vw;
     }
 
     .searchBar .search input{
-        width: 16rem;
+        width: 14rem;
         height: 2.5rem;
     }
 
-    .searchBar .search span{
-        padding: 0.825rem;
-    }
 }

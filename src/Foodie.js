@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import edamam from './apis/edamam';
 import DisplayRecipe from './components/display_receipe';
+import Footer from './components/footer';
 import Navbar from './components/navbar';
 import SearchBar from './components/searchbar';
 
@@ -48,6 +49,7 @@ const Foodie = ()=>{
             <Navbar />
             <SearchBar getSearchTerm={getSearchTerm}/>
             {shouldIDisplayRecipe()}
+            <Footer />
         </div>
     );
 }

@@ -7,15 +7,25 @@ const DisplayRecipe = ({ recipes }) => {
         console.log("From display recipe", recipes.data.hits);
         let { hits } = recipes.data;
         console.log(hits);
-        let renderedRecipes = hits.map((recipe) => {
+        let renderedRecipes = hits.map((recipe, index) => {
             return (
                 <div key={recipe.image}>
-                    <RecipeCard recipe={recipe} />
+                    <RecipeCard recipe={recipe} index={index} key={recipe.image}/>
                 </div>
             );
         })
 
-        return <div className="displayRecipe">{renderedRecipes}</div>
+        return <div>
+            <div className="recipeHeader">
+                <h1>Checkout your search results here!</h1>
+            </div>
+            <div className="displayRecipe">
+                {renderedRecipes}
+            </div>
+            <div className="recipeFooter">
+                <h1>For best recipes in the world only at forfoodies.com!</h1>
+            </div>
+        </div>
     } else {
         return <div></div>
     }
