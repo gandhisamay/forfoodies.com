@@ -29,20 +29,6 @@ const DisplayRecipe = ({ recipes }) => {
     } else {
         return <div></div>
     }
-    // if(recipes){
-    // let renderedRecipes = recipes.data.hits.map((recipe)=>{
-    //     return (
-    //         <div key={recipe.image}>
-    //            <RecipeCard recipe={recipe} />
-    //         </div>
-    //     );
-    // })
-
-    // return <div className="displayRecipe">
-    //     {renderedRecipes}
-    // </div>
-    // }else{
-    // }
 }
 
 export default DisplayRecipe;

@@ -1,7 +1,6 @@
 import React from "react";
 import "../Styles/app.css";
-import { BrowserRouter as Route, Link, Switch } from "react-router-dom";
-import DetailedRecipe from "./detailed_recipes";
+import {Link} from "react-router-dom";
 
 const RecipeCard = ({ recipe, index, key }) => {
     console.log("From recipe", recipe);
@@ -12,12 +11,7 @@ const RecipeCard = ({ recipe, index, key }) => {
                     <img src={recipe.recipe.image} alt="" />
                 </div>
                 <div className="label">
-                    <Link to={`/${index}`} className="links">{recipe.recipe.label}</Link>
-                    <Switch>
-                        <Route exact path={`/${index}`}>
-                            <DetailedRecipe recipe={recipe} />
-                        </Route>
-                    </Switch>
+                    <Link to={recipe.recipe.image} className="links">{recipe.recipe.label}</Link>
                 </div>
             </div>
         </div>

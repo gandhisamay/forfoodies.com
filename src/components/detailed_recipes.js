@@ -1,13 +1,8 @@
 import React from 'react';
 
 const DetailedRecipe = ({recipe})=>{
-    return(
-        <div className="detailedRecipe">
-            <div className="recipe-image">
-                <img src={recipe.recipe.image} alt="" />
-            </div>
-        </div>
-    );
+    console.log("From detailedRecipe", recipe);
+    return <h1>Hello</h1>;
 }
 
 export default DetailedRecipe;
