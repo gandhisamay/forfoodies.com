@@ -1,5 +1,5 @@
 .navbar{
-    background-color: #E3E1EF;
+    background-color: #fff0f3;
     height: 3rem;
     /* color: #8e9aaf; */
     color: #e71d36;
@@ -111,12 +111,12 @@
     justify-content: center;
     flex-direction: column;
     font-size: 20px;
-    background-color: #E3E1EF;
+    background-color: #fff0f3;
     height: 3rem;
 }
 
 .links{
-    color: #2ec4b6;
+    color: #c9184a;
     text-decoration: none;
 }
 .links:hover{
@@ -127,19 +127,26 @@
     display: none;
 }
 
+.detailedRecipe{
+    background-color: #fff0f3;
+}
+
+
 .detailedRecipe .top-info{
     display: flex;
     gap: 4rem;
-    margin: 1rem;
+    margin: 0 1rem;
     align-items: center;
     flex-wrap: wrap;
     width: fit-content;
     justify-content: center;
+    text-align: center;
 }
 
 .detailedRecipe .top-info img{
     width: 100%;
     height: 30rem;
+    margin-top: 1rem;
 }
 
 .detailedRecipe .label{
@@ -157,6 +164,8 @@
 .for-tags{
     display: flex;
     flex-wrap: wrap;
+    width: 60%;
+    margin: 0 20%;
     margin-top: 2rem;
 }
 

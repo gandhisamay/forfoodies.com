@@ -28,7 +28,7 @@ const DisplayRecipe = ({ recipes }) => {
             </div>
         </div>
     } else {
-        return <div></div>
+        return <div className="recipeHeader">We are fetching your requested recipes</div>
     }
 }
 
