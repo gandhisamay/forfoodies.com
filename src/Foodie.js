@@ -12,12 +12,9 @@ const Foodie = () => {
   let [results, setResults] = useState({});
 
   useEffect(() => {
-    console.log("From useeffect", term);
     if (!term) {
-      console.log("From if");
       return;
     } else {
-      console.log("in else", term);
       edamam("/v2", {
         params: {
           q: term,
@@ -33,9 +30,7 @@ const Foodie = () => {
   }, [term]);
 
   const getSearchTerm = (search) => {
-    console.log("before set term!!", term);
     setTerm(search);
-    console.log(term);
   };
 
   return (

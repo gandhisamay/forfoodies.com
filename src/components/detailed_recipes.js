@@ -11,13 +11,11 @@ const DetailedRecipe = ({ match }) => {
     useEffect(() => {
         setNumRequests(numRequests++);
         if (numRequests === 1) {
-            let url = `/v2/${window.location.href.slice(66, 105)}`
+            let url = `/v2/${window.location.href.slice(window.location.href.length-39, window.location.href.length)}`
             edamam.get(url).then((res) => {
                 setSearchid(res);
             });
         }
-
-        console.log("id search", searchId);
     }, [searchId, numRequests]);
 
     if (searchId.data) {
@@ -33,12 +31,12 @@ const DetailedRecipe = ({ match }) => {
                             {label}
                         </div>
                         <div className="for-tags">
-                            {healthLabels.map((label) => <Tag tag={label} />)}
+                            {healthLabels.map((label, index) => <Tag key={index} tag={label} />)}
                         </div>
                         <div className="ingredients">
                             <h1>Ingredients</h1>
                             <div className="ingredients-list" style={{marginBottom:"2rem"}}>
-                                {ingredients.map((ingredient) => <p style={{fontSize:"18px",lineHeight:"1.25"}}>{ingredient.text}</p>)}
+                                {ingredients.map((ingredient,index) => <p key={index} style={{fontSize:"18px",lineHeight:"1.25"}}>{ingredient.text}</p>)}
                             </div>
                         </div>
                         <div className="calories" style={{fontSize:"24px"}}>
@@ -47,7 +45,7 @@ const DetailedRecipe = ({ match }) => {
                         <div className="cautions">
                             <h1>Cautions</h1>
                             <div className="cautions-list" style={{marginBottom:"2rem"}}>
-                                {cautions.map((caution)=><p style={{fontSize:"18px",lineHeight:"1.25"}}>{caution}</p>)}
+                                {cautions.map((caution,index)=><p key={index} style={{fontSize:"18px",lineHeight:"1.25"}}>{caution}</p>)}
                             </div>
                         </div>
                         <div className="forMoreDetails">

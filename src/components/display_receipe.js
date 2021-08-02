@@ -4,13 +4,12 @@ import '../Styles/app.css';
 
 const DisplayRecipe = ({ recipes }) => {
     if (recipes.data) {
-        console.log("From display recipe", recipes.data.hits);
         let { hits } = recipes.data;
-        console.log(hits);
         let renderedRecipes = hits.map((recipe, index) => {
-            console.log(index, recipe);
+
             return (
-                <div key={recipe.uri}>
+                <div key={index
+                }>
                     <RecipeCard recipe={recipe} index={index}/>
                 </div>
             );
