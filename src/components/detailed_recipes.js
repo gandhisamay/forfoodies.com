@@ -6,17 +6,13 @@ import Tag from './tags';
 const DetailedRecipe = ({ match }) => {
 
     let [searchId, setSearchid] = useState({})
-    let [numRequests, setNumRequests] = useState(0);
     let [url, setURL] = useState('')
 
     useEffect(() => {
-        setNumRequests(numRequests++);
-        if (numRequests === 1) {
-            setURL(`/v2/${window.location.href.slice(window.location.href.length-39, window.location.href.length)}`)
-            edamam.get(url).then((res) => {
-                setSearchid(res);
-            });
-        }
+        setURL(`/v2/${window.location.href.slice(window.location.href.length-39, window.location.href.length)}`)
+        edamam.get(url).then((res) => {
+            setSearchid(res);
+        });
     }, [url]);
 
     if (searchId.data) {
