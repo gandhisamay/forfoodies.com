@@ -8,9 +8,10 @@ const DisplayRecipe = ({ recipes }) => {
         let { hits } = recipes.data;
         console.log(hits);
         let renderedRecipes = hits.map((recipe, index) => {
+            console.log(index, recipe);
             return (
-                <div key={recipe.image}>
-                    <RecipeCard recipe={recipe} index={index} key={recipe.image}/>
+                <div key={recipe.uri}>
+                    <RecipeCard recipe={recipe} index={index}/>
                 </div>
             );
         })

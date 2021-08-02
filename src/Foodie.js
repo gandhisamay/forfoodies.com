@@ -48,8 +48,8 @@ const Foodie = () => {
             <DisplayRecipe recipes={results} />
             <Footer />
           </Route>
-          <Route exact path="/:id">
-            <DetailedRecipe recipe={results} />
+          <Route path="/:id">
+            <DetailedRecipe/>
           </Route>
         </Switch>
       </div>
