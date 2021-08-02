@@ -21,18 +21,38 @@ const DetailedRecipe = ({ match }) => {
     }, [searchId, numRequests]);
 
     if (searchId.data) {
+        let {image, label, healthLabels, ingredients,calories, cautions,url} = searchId.data.recipe;
         return (
             <div className="detailedRecipe">
                 <div className="top-info">
                     <div className="image">
-                        <img src={searchId.data.recipe.image} alt="" />
+                        <img src={image} alt="" />
                     </div>
                     <div className="recipe-data">
                         <div className="label">
-                            {searchId.data.recipe.label}
+                            {label}
                         </div>
                         <div className="for-tags">
-                            {searchId.data.recipe.healthlabels.map((label) => <Tag tag={label} />)}
+                            {healthLabels.map((label) => <Tag tag={label} />)}
+                        </div>
+                        <div className="ingredients">
+                            <h1>Ingredients</h1>
+                            <div className="ingredients-list" style={{marginBottom:"2rem"}}>
+                                {ingredients.map((ingredient) => <p style={{fontSize:"18px",lineHeight:"1.25"}}>{ingredient.text}</p>)}
+                            </div>
+                        </div>
+                        <div className="calories" style={{fontSize:"24px"}}>
+                            Calories: {calories}  (Per Serving)
+                        </div>
+                        <div className="cautions">
+                            <h1>Cautions</h1>
+                            <div className="cautions-list" style={{marginBottom:"2rem"}}>
+                                {cautions.map((caution)=><p style={{fontSize:"18px",lineHeight:"1.25"}}>{caution}</p>)}
+                            </div>
+                        </div>
+                        <div className="forMoreDetails">
+                            <h1>For More Details Visit</h1>
+                            <a href={url} style={{marginTop:"1rem"}}>{url}</a>
                         </div>
                     </div>
                 </div>
