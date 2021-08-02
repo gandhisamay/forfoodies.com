@@ -7,16 +7,17 @@ const DetailedRecipe = ({ match }) => {
 
     let [searchId, setSearchid] = useState({})
     let [numRequests, setNumRequests] = useState(0);
+    let [url, setURL] = useState('')
 
     useEffect(() => {
         setNumRequests(numRequests++);
         if (numRequests === 1) {
-            let url = `/v2/${window.location.href.slice(window.location.href.length-39, window.location.href.length)}`
+            setURL(`/v2/${window.location.href.slice(window.location.href.length-39, window.location.href.length)}`)
             edamam.get(url).then((res) => {
                 setSearchid(res);
             });
         }
-    }, [searchId, numRequests]);
+    }, [url]);
 
     if (searchId.data) {
         let {image, label, healthLabels, ingredients,calories, cautions,url} = searchId.data.recipe;
